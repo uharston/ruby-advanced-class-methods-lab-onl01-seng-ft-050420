@@ -47,11 +47,11 @@ class Song
   # end
 
   def self.alphabetical
-    self.all.sort
-    # self.all.each do |value|
-    #   value.sort
-    #
-    # end
+    
+    self.all.each do |value|
+      value.name
+    
+    end
   end
 
   def self.new_from_filename(name)
