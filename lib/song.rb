@@ -47,11 +47,12 @@ class Song
   # end
 
   def self.alphabetical
-    sorted = []
-    self.all.sort
-    # self.all.each do |value|
-    #    sorted << value.name
-    #  end
+    @@all.sort_by{|x| x.name}
+    # sorted = []
+    # 
+    #  self.all.each.with_index do |value, index|
+    #  value.name
+    #   end
     #  sorted.sort
   end
 
