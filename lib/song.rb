@@ -50,7 +50,7 @@ class Song
     sorted = []
 
      self.all.each do |value|
-       sorted << value.name
+       sorted << value.name.sort
 
      end
      sorted
