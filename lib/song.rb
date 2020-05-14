@@ -26,12 +26,12 @@ class Song
   end
 
   def self.find_by_name(name_of)
-    i = 0 
+    i = 0
     while i < self.all.length
       if self.all[i].name == name_of
         self.all[i]
         i += 1
-      end 
+      end
     # self.all.select do |value|
     #   if value.include?(name) == true
     #     value
