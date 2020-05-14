@@ -27,7 +27,7 @@ class Song
 
   def self.find_by_name(name)
     self.all.select do |value|
-      value == name 
+      value == name
     end
   end
 
