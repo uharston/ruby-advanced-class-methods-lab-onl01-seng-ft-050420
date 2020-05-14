@@ -46,9 +46,9 @@ class Song
   #   end
   # end
   def self.alphabetical
-    self.all.each do |value| 
+    self.all.each do |value|
       value.name.sort
-      binding.pry 
+      binding.pry
     end
   end
 
