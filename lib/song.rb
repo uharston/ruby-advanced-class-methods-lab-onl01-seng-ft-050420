@@ -47,9 +47,9 @@ class Song
   # end
 
   def self.alphabetical
-
-    self.all.map do |value|
-      value.class
+self.all.class
+    # self.all.map do |value|
+    #   value.class
 
     end
   end
