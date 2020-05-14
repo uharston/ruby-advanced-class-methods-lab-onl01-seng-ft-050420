@@ -39,19 +39,15 @@ class Song
 
 
   def self.find_or_create_by_name(name_of)
-    self.all.find do |person|
-      if person.name == name_of
-        person.name
-      end
-    else
+    if self.all.find do |person| {person.name == name_of} == nil
       song = self.new
       song.name= name_of
       self.all << song
       song
-    end
-
+    else 
+      self.all.find do |person| {person.name == name_of}
       end
-  end
+    end
 
   def self.alphabetical
     self.all.sort
