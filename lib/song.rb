@@ -50,9 +50,10 @@ class Song
     sorted = []
 
      self.all.each do |value|
-       sorted << value.name
+       sorted << value.name.class
 
      end
+     sorted
   end
 
   def self.new_from_filename(name)
