@@ -45,11 +45,11 @@ class Song
   #     found
   #   end
   # end
-  binding.pry 
+  binding.pry
   def self.alphabetical
     self.all.each do |value|
       value.name.sort
-      
+
     end
   end
 
