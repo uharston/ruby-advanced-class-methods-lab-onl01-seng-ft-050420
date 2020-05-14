@@ -27,27 +27,35 @@ class Song
 
   def self.find_by_name(name_of)
     self.all.find {|person| person.name == name_of}
-    # i = 0
-    # while i < self.all.length
-    #   if self.all[i].name == name_of
-    #      self.all[i]
-    #     i += 1
-    #   end
-    # end
+    #returns the object raw
   end
 
-
-
   def self.find_or_create_by_name(name_of)
-    if self.all.find do |person| {person.name == name_of} == nil
+    found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist 
+    #This creates the object
+    if found == nil
       song = self.new
       song.name= name_of
       self.all << song
       song
     else
-      self.all.find do |person| {person.name == name_of}
-      end
+      found
     end
+  end
+
+
+  # def self.find_or_create_by_name(name_of)
+  #   if self.all.find do |person| {person.name == name_of} == nil
+  #     song = self.new
+  #     song.name= name_of
+  #     self.all << song
+  #     song
+  #   else
+  #     self.all.find do |person| {person.name == name_of}
+  #     end
+  #   end
+
+
 
   def self.alphabetical
     self.all.sort
