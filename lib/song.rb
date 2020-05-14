@@ -39,7 +39,7 @@ class Song
 
 
   def self.find_or_create_by_name(name_of)
-    self.all.find do |person| 
+    self.all.find do |person|
       if person.name == name_of
         person.name
       end
