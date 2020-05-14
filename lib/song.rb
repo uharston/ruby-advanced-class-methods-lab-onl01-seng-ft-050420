@@ -26,7 +26,9 @@ class Song
   end
 
   def self.find_by_name(name)
-    self.all.grep(/name/)
+    self.all.select do |value|
+      value == name 
+    end
   end
 
   def self.find_or_create_by_name(name)
