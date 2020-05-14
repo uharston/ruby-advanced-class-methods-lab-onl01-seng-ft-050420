@@ -31,7 +31,7 @@ class Song
   end
 
   def self.find_or_create_by_name(name_of)
-    found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist 
+    found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist
     #This creates the object
     if found == nil
       song = self.new
