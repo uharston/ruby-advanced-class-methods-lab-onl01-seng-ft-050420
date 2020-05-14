@@ -45,14 +45,11 @@ class Song
   #     found
   #   end
   # end
-
-
-
-
-
-
   def self.alphabetical
-    self.all.sort
+    self.all.each do |value| 
+      value.name.sort
+      binding.pry 
+    end
   end
 
   def self.new_from_filename(name)
