@@ -44,7 +44,7 @@ class Song
       song.name= name_of
       self.all << song
       song
-    else 
+    else
       self.all.find do |person| {person.name == name_of}
       end
     end
