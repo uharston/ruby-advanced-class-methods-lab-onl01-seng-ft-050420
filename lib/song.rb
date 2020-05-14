@@ -49,7 +49,7 @@ class Song
   def self.alphabetical
     @@all.sort_by{|x| x.name}
     # sorted = []
-    # 
+    #
     #  self.all.each.with_index do |value, index|
     #  value.name
     #   end
