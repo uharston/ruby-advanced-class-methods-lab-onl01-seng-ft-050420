@@ -51,7 +51,7 @@ self.all.class
     # self.all.map do |value|
     #   value.class
 
-    end
+    # end
   end
 
   def self.new_from_filename(name)
