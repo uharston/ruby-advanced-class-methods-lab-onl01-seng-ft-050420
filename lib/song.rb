@@ -49,7 +49,7 @@ class Song
   def self.alphabetical
 
     self.all.map do |value|
-      value.name.sort
+      value.name.class
 
     end
   end
