@@ -47,7 +47,7 @@ class Song
   # end
 
   def self.alphabetical
-    @@all.sort_by{|x| x.name}
+    self.all.sort_by{|value| value.name}
     # sorted = []
     #
     #  self.all.each.with_index do |value, index|
@@ -55,8 +55,12 @@ class Song
     #   end
     #  sorted.sort
   end
-
-  def self.new_from_filename(name)
+  #Song.new_from_filename("Taylor Swift - Blank Space.mp3".split(" - ")[1].chomp(".mp3"))
+  def self.new_from_filename(name) 
+    song = self.new
+    song.name= name.split(" - ")[1].chomp(".mp3")
+    song.artist_name = name.split(" - ")[0]
+    song
 
   end
 
