@@ -48,12 +48,11 @@ class Song
 
   def self.alphabetical
     sorted = []
-
-     self.all.each do |value|
-       sorted << value.name
-
-     end
-     sorted.sort
+    self.all.class
+    # self.all.each do |value|
+    #    sorted << value.name
+    #  end
+    #  sorted.sort
   end
 
   def self.new_from_filename(name)
