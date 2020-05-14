@@ -29,6 +29,7 @@ class Song
     self.all.select do |value|
       if value.include?(name)
         name
+      end
     end
   end
 
