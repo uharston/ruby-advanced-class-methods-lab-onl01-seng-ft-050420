@@ -56,7 +56,7 @@ class Song
     #  sorted.sort
   end
   #Song.new_from_filename("Taylor Swift - Blank Space.mp3".split(" - ")[1].chomp(".mp3"))
-  def self.new_from_filename(name) 
+  def self.new_from_filename(name)
     song = self.new
     song.name= name.split(" - ")[1].chomp(".mp3")
     song.artist_name = name.split(" - ")[0]
