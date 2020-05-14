@@ -49,7 +49,7 @@ class Song
   def self.alphabetical
     sorted = []
 
-     self.all.map do |value|
+     self.all.each do |value|
        sorted << value.name
 
      end
