@@ -31,11 +31,7 @@ class Song
   end
   def self.find_or_create_by_name(name_of)
     found = self.find_by_name(name_of)
-    if found == nil
-      self.create_by_name(name_of)
-    else
-      found
-    end
+    found == nil ? self.create_by_name(name_of) : found
   end
   # def self.find_or_create_by_name(name_of)
   #   found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist
