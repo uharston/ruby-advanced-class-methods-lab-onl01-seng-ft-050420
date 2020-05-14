@@ -48,8 +48,8 @@ class Song
 
   def self.alphabetical
 
-    self.all.each do |value|
-      value.name.sort
+    self.all.map do |value|
+      value.name
 
     end
   end
