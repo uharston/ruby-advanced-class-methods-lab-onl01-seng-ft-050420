@@ -18,9 +18,9 @@ class Song
     song #return that raw object
   end
 
-  def self.create_by_name(name)
+  def self.create_by_name(name_of)
     song = self.new
-    song.name= name
+    song.name= name_of
     self.all << song
     song
   end
@@ -29,31 +29,29 @@ class Song
     self.all.find {|person| person.name == name_of}
     #returns the object raw
   end
-
   def self.find_or_create_by_name(name_of)
-    found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist
-    #This creates the object
-    if found == nil
-      song = self.new
-      song.name= name_of
-      self.all << song
-      song
+    found = self.find_by_name(name_of)
+    if found == nil 
+      self.create_by_name(name_of)
     else
       found
     end
   end
-
-
   # def self.find_or_create_by_name(name_of)
-  #   if self.all.find do |person| {person.name == name_of} == nil
+  #   found = self.all.find {|person| person.name == name_of} #this finds and return the object if it exist
+  #   #This creates the object
+  #   if found == nil
   #     song = self.new
   #     song.name= name_of
   #     self.all << song
   #     song
   #   else
-  #     self.all.find do |person| {person.name == name_of}
-  #     end
+  #     found
   #   end
+  # end
+
+
+
 
 
 
