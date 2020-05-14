@@ -13,14 +13,16 @@ class Song
     self.all[-1]
   end
   def self.new_by_name(name) #song = Song.new_by_name("Blank Space")
-    song = self.new #<3493285734985>
+    song = self.new #<random data 3493285734985>
     song.name= name #assigning the data a name
     song #return that raw object
   end
 
   def self.create_by_name(name)
-    self.all << self.new
-    self.all[-1]
+    song = self.new
+    song.name= name 
+    self.all << song
+    song
   end
 
   def self.find_by_name(name)
