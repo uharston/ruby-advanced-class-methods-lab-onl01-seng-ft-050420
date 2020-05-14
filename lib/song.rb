@@ -50,7 +50,7 @@ class Song
     sorted = []
 
      self.all.map do |value|
-       sorted << value.class
+       sorted << value.name
 
      end
   end
